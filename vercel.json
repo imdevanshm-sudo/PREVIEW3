@@ -1,24 +1,21 @@
 {
+  "buildCommand": "echo 'Using committed dist output'",
+  "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/", "destination": "/dist/index.html" },
-    { "source": "/index", "destination": "/dist/index.html" },
-    { "source": "/index.html", "destination": "/dist/index.html" },
+    { "source": "/archive", "destination": "/archive.html" },
+    { "source": "/archive/", "destination": "/archive.html" },
 
-    { "source": "/archive", "destination": "/dist/archive.html" },
-    { "source": "/archive.html", "destination": "/dist/archive.html" },
+    { "source": "/process", "destination": "/process.html" },
+    { "source": "/process/", "destination": "/process.html" },
+    { "source": "/the-process", "destination": "/process.html" },
+    { "source": "/the-process/", "destination": "/process.html" },
 
-    { "source": "/process", "destination": "/dist/process.html" },
-    { "source": "/the-process", "destination": "/dist/process.html" },
-    { "source": "/process.html", "destination": "/dist/process.html" },
+    { "source": "/collective", "destination": "/collective.html" },
+    { "source": "/collective/", "destination": "/collective.html" },
+    { "source": "/studio", "destination": "/collective.html" },
+    { "source": "/studio/", "destination": "/collective.html" },
 
-    { "source": "/collective", "destination": "/dist/collective.html" },
-    { "source": "/studio", "destination": "/dist/collective.html" },
-    { "source": "/collective.html", "destination": "/dist/collective.html" },
-
-    { "source": "/project-detail", "destination": "/dist/project-detail.html" },
-    { "source": "/project-detail.html", "destination": "/dist/project-detail.html" },
-
-    { "source": "/styles.css", "destination": "/dist/styles.css" },
-    { "source": "/main.js", "destination": "/dist/main.js" }
+    { "source": "/project-detail", "destination": "/project-detail.html" },
+    { "source": "/project-detail/", "destination": "/project-detail.html" }
   ]
 }
