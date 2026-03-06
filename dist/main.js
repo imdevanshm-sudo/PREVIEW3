@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
+  const isTouchLike = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+  const isNarrowViewport = window.matchMedia('(max-width: 900px)').matches;
+  if (isTouchLike || isNarrowViewport) {
+    root.classList.add('mobile-performance');
+  }
+
   const setAppVh = () => {
     const vh = window.innerHeight * 0.01;
     root.style.setProperty('--app-vh', `${vh}px`);
@@ -18,7 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lowMemory = typeof navigator.deviceMemory === 'number' && navigator.deviceMemory <= 4;
   const lowCpu = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 4;
-  if (lowMemory || lowCpu) {
+  const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  const constrainedNetwork =
+    !!connection &&
+    (connection.saveData === true || /(^|-)2g|3g/.test(String(connection.effectiveType || '')));
+  if (lowMemory || lowCpu || constrainedNetwork) {
     root.classList.add('low-end-device');
   }
 
@@ -73,6 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
       img.setAttribute('decoding', 'async');
     }
   });
+
+  if (root.classList.contains('mobile-performance')) {
+    const renderLazyNodes = Array.from(document.querySelectorAll('section, article, footer'));
+    renderLazyNodes.slice(2).forEach((node) => {
+      node.style.contentVisibility = 'auto';
+      node.style.containIntrinsicSize = '1px 900px';
+    });
+  }
 
   const isMobileViewport = window.matchMedia('(max-width: 767px)').matches;
   if (!isMobileViewport) {
