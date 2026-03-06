@@ -17,19 +17,22 @@
   <style>
     .bg-grain::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 50; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"); }
     .drop-cap::first-letter { float: left; font-family: 'Playfair Display', serif; font-size: 4.5rem; line-height: 0.8; padding-right: 0.75rem; padding-top: 0.25rem; color: #C93C20; }
+    @media (max-width: 767px) {
+      .drop-cap::first-letter { font-size: 3rem; padding-right: 0.5rem; }
+    }
   </style>
   <link rel="stylesheet" href="./styles.css" />
   <script src="./main.js" defer></script>
 </head>
 <body class="bg-paper text-ink font-body antialiased bg-grain">
-  <nav class="fixed top-0 left-0 w-full z-40 px-6 py-4 mix-blend-difference text-white flex justify-between items-center border-b border-white/10">
-    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px]">movie_filter</span><h1 class="font-sans font-bold text-lg tracking-tight">LUMEN</h1></div>
+  <nav class="fixed top-0 left-0 w-full z-40 px-4 sm:px-6 py-4 mix-blend-difference text-white flex justify-between items-center border-b border-white/10">
+    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px]">movie_filter</span><h1 class="font-sans font-bold text-base sm:text-lg tracking-tight">LUMEN</h1></div>
     <div class="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-widest">
       <a href="./archive.html" class="hover:text-cinema-red">Work</a>
       <a href="./collective.html" class="hover:text-cinema-red">Studio</a>
       <a href="./index.html" class="hover:text-cinema-red">Manifesto</a>
     </div>
-    <a href="./process.html" class="font-mono text-xs uppercase border border-white/30 px-4 py-2">Menu</a>
+    <a href="./process.html" class="font-mono text-xs uppercase border border-white/30 px-3 sm:px-4 py-2.5">Menu</a>
   </nav>
 
   <header class="relative w-full h-screen overflow-hidden">
@@ -37,18 +40,18 @@
       <img alt="The Lighthouse" class="w-full h-full object-cover opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT8aTZbe6ajsGHLoqz0YYp2HaepG1W9kXc-nWv3hCmbxWx2_TfAz__g0wJk9cmSwCZe3lODznSLdnm2s4Z3i70vbsneUVnlRMdOfrrhNCwaF_uuRE7gS6GP_MzQH45Gyd_imNlwcgpZxWUvl7U9bYEArj7lz0c4z4PybaCF-0tVZFQjtOFGzFCQvAgtybO4RZsp3w9h0nwfVucO9iAkxU9l0ooUk0XtFENJreWJZFj8lajpXt7Q-uugtNG4vDV9WZV3-w5eTa0YEA"/>
       <div class="absolute inset-0 bg-black/20"></div>
     </div>
-    <div class="absolute bottom-10 left-10 text-white z-10">
+    <div class="absolute bottom-6 sm:bottom-10 left-4 sm:left-10 text-white z-10 pr-4">
       <div class="flex items-center gap-3 mb-4"><span class="w-12 h-[1px] bg-cinema-red"></span><span class="font-mono text-xs tracking-widest uppercase text-cinema-red">Case Study</span></div>
-      <h2 class="font-serif text-6xl md:text-8xl italic leading-none mb-2">The Lighthouse</h2>
-      <p class="font-mono text-sm uppercase tracking-wider opacity-80">A24 Films / 2024</p>
+      <h2 class="font-serif text-4xl sm:text-6xl md:text-8xl italic leading-none mb-2">The Lighthouse</h2>
+      <p class="font-mono text-xs sm:text-sm uppercase tracking-wider opacity-80">A24 Films / 2024</p>
     </div>
   </header>
 
   <main class="bg-paper">
-    <section class="border-b border-ink/10"><div class="max-w-[1400px] mx-auto px-6 py-20 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-12"><div class="md:col-span-4 space-y-8"><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Director</h3><p class="font-sans text-xl font-medium">Robert Eggers</p></div><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Cinematography</h3><p class="font-sans text-xl font-medium">Jarin Blaschke</p></div></div><div class="md:col-span-4 space-y-8"><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Editor</h3><p class="font-sans text-xl font-medium">Louise Ford</p></div><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Format</h3><p class="font-sans text-xl font-medium">35mm Black &amp; White</p></div></div><div class="md:col-span-4 bg-paper-dim p-8"><h4 class="font-serif italic text-2xl mb-2">Cannes Film Festival</h4><p class="font-mono text-xs text-muted uppercase">Winner: FIPRESCI Prize</p></div></div></section>
-    <section class="py-24 md:py-40 border-b border-ink/10"><div class="max-w-[680px] mx-auto px-6"><p class="drop-cap text-lg leading-relaxed">The challenge was not merely to capture the isolation of late 19th-century maritime life, but to construct a psychological reality where the boundaries of sanity erode with the tides.</p></div></section>
-    <section class="py-24 md:py-32 bg-paper-dim/30"><div class="max-w-[1200px] mx-auto px-6 flex flex-col gap-20"><img class="w-full aspect-[16/9] object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYMSqnWrgo_3JZUQYtOO1twfjaCQT9gePlCOnp_TjK1BiAf5QeaXa6knEoWiQlF1msRMUEmQdt2FdxCaDCq2q78TXlnga4znovLNI4LX4vYBlGRyl-H8kh2brdHt-MDkJUyZ9_6OxtLrgDK3T-UP2cXPBdmn5nofh9za80UfTJjCoX481m4JlpIw79u7gGCE4qpkajYokMqrmdRKPY4MMoYtUDZr-DvRdKEXI8LDARA5Zu-usDDo7Uym7c6K7elvW660yM5yBE6xs" alt="Storm"/><img class="w-full aspect-[2.39/1] object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZ4t2XMgBWybS2GB7s3Rhu2kbfb7_feBj2I2SEIevZ37Xsg8dyQv8ay59SaBaIepQiq0n7Fa2aXmXWlnUDFHMkL73CYp393hnnNOGZ-BD5haBCDspP_IAlqt0v9DSn3B9Lrn4Rhko8eWvaog0rogDLwowypHIoIUHGIVTpZNBZcxVcGvwSkHZK20_yqdiof1auNYZdx4ZZ08vvKX0_PL7xsOhn98SZ56GhhSTWd2ClVKztnAHQtE0xwmglJJgDY0In8NEF3kbYFc" alt="Dinner"/></div></section>
-    <footer class="bg-primary text-paper py-32 text-center"><p class="font-mono text-xs text-cinema-red uppercase tracking-[0.2em] mb-6">Next Project</p><a href="./archive.html" class="font-serif text-6xl md:text-8xl italic">Neon Demon</a></footer>
+    <section class="border-b border-ink/10"><div class="max-w-[1400px] mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-y-10 md:gap-y-12 md:gap-x-12"><div class="md:col-span-4 space-y-8"><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Director</h3><p class="font-sans text-lg sm:text-xl font-medium">Robert Eggers</p></div><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Cinematography</h3><p class="font-sans text-lg sm:text-xl font-medium">Jarin Blaschke</p></div></div><div class="md:col-span-4 space-y-8"><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Editor</h3><p class="font-sans text-lg sm:text-xl font-medium">Louise Ford</p></div><div class="border-t border-ink/20 pt-2"><h3 class="font-mono text-xs text-muted uppercase tracking-wider">Format</h3><p class="font-sans text-lg sm:text-xl font-medium">35mm Black &amp; White</p></div></div><div class="md:col-span-4 bg-paper-dim p-6 sm:p-8"><h4 class="font-serif italic text-xl sm:text-2xl mb-2">Cannes Film Festival</h4><p class="font-mono text-xs text-muted uppercase">Winner: FIPRESCI Prize</p></div></div></section>
+    <section class="py-16 sm:py-24 md:py-40 border-b border-ink/10"><div class="max-w-[680px] mx-auto px-4 sm:px-6"><p class="drop-cap text-base sm:text-lg leading-relaxed">The challenge was not merely to capture the isolation of late 19th-century maritime life, but to construct a psychological reality where the boundaries of sanity erode with the tides.</p></div></section>
+    <section class="py-14 sm:py-24 md:py-32 bg-paper-dim/30"><div class="max-w-[1200px] mx-auto px-4 sm:px-6 flex flex-col gap-12 sm:gap-20"><img class="w-full aspect-[16/9] object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYMSqnWrgo_3JZUQYtOO1twfjaCQT9gePlCOnp_TjK1BiAf5QeaXa6knEoWiQlF1msRMUEmQdt2FdxCaDCq2q78TXlnga4znovLNI4LX4vYBlGRyl-H8kh2brdHt-MDkJUyZ9_6OxtLrgDK3T-UP2cXPBdmn5nofh9za80UfTJjCoX481m4JlpIw79u7gGCE4qpkajYokMqrmdRKPY4MMoYtUDZr-DvRdKEXI8LDARA5Zu-usDDo7Uym7c6K7elvW660yM5yBE6xs" alt="Storm"/><img class="w-full aspect-[2.39/1] object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcZ4t2XMgBWybS2GB7s3Rhu2kbfb7_feBj2I2SEIevZ37Xsg8dyQv8ay59SaBaIepQiq0n7Fa2aXmXWlnUDFHMkL73CYp393hnnNOGZ-BD5haBCDspP_IAlqt0v9DSn3B9Lrn4Rhko8eWvaog0rogDLwowypHIoIUHGIVTpZNBZcxVcGvwSkHZK20_yqdiof1auNYZdx4ZZ08vvKX0_PL7xsOhn98SZ56GhhSTWd2ClVKztnAHQtE0xwmglJJgDY0In8NEF3kbYFc" alt="Dinner"/></div></section>
+    <footer class="bg-primary text-paper py-16 sm:py-24 md:py-32 text-center px-4"><p class="font-mono text-xs text-cinema-red uppercase tracking-[0.2em] mb-6">Next Project</p><a href="./archive.html" class="font-serif text-4xl sm:text-6xl md:text-8xl italic">Neon Demon</a></footer>
   </main>
 </body>
 </html>
