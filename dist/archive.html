@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMEN STUDIOS - The Archive</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: "#cd3b1d", ink: "#1A1A1A", paper: "#F4F1EA", "paper-dim": "#E8E4DB", "cinema-red": "#C93C20" },
+          fontFamily: { serif: ["Playfair Display", "serif"], sans: ["Space Grotesk", "sans-serif"], mono: ["JetBrains Mono", "monospace"], display: ["Newsreader", "serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .cinematic-card img { filter: grayscale(100%) contrast(1.1); transition: filter .6s, transform .6s; }
+    .cinematic-card:hover img { filter: grayscale(0%) contrast(1); transform: scale(1.05); }
+    .overlay { transform: translateY(100%); transition: transform .5s; }
+    .cinematic-card:hover .overlay { transform: translateY(0%); }
+  </style>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./main.js" defer></script>
+</head>
+<body class="relative min-h-screen w-full font-display antialiased bg-paper text-ink">
+  <nav class="fixed top-0 left-0 right-0 z-40 w-full border-b border-ink/10 bg-paper/95 backdrop-blur-sm">
+    <div class="mx-auto flex h-20 w-full max-w-[1440px] items-center justify-between px-6 lg:px-12">
+      <a class="group flex items-center gap-3" href="./index.html"><span class="material-symbols-outlined text-[24px]">shutter_speed</span><span class="font-sans text-lg font-bold">LUMEN STUDIOS</span></a>
+      <div class="hidden items-center gap-12 md:flex">
+        <a class="font-mono text-xs uppercase tracking-widest hover:text-cinema-red" href="./index.html">Manifesto</a>
+        <a class="font-mono text-xs uppercase tracking-widest text-cinema-red" href="./archive.html">Archive</a>
+        <a class="font-mono text-xs uppercase tracking-widest hover:text-cinema-red" href="./process.html">Process</a>
+        <a class="font-mono text-xs uppercase tracking-widest hover:text-cinema-red" href="./collective.html">Collective</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative z-10 flex flex-col pt-20">
+    <header class="px-6 py-20 lg:px-12 lg:py-32 max-w-[1440px] mx-auto w-full">
+      <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+        <div class="max-w-2xl"><span class="font-mono text-xs uppercase tracking-widest text-cinema-red mb-4 block">Selected Works 2020—2024</span><h1 class="font-serif text-6xl leading-[0.9] lg:text-8xl italic">The Archive<span class="text-cinema-red">.</span></h1></div>
+        <p class="max-w-md font-display text-xl leading-relaxed text-ink/80">A collection of visual experiments, commercial campaigns, and narrative shorts.</p>
+      </div>
+    </header>
+
+    <section class="mx-auto w-full max-w-[1440px] px-6 py-12 lg:px-12">
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 auto-rows-min">
+        <a class="group cinematic-card relative col-span-1 lg:col-span-2 aspect-[16/9] cursor-pointer overflow-hidden bg-paper-dim" href="./project-detail.html">
+          <img alt="Midnight Sun" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOmST7toe1q8Gdq7XTvBK0AokHtzKIs7h2hmTZw-F4SXuTsnnQ2IzYacDnf-eoDU5zrhMduz858B_YrQFS0lZ8Ib9C7VmQGQvVJtJdvDQVo-D-Wg_DZNCo1GcMLGxub-zQPWKxUtAPYvRndBSkZ1uehtERgfD0Ll8gtLuf7vv12BQQ5PASqZ2ffBTDbmQX7asHrdQ2mbUiUc6Q88EhSR2putFz8_gv733Qk3Wr3Fq8GFqL53o2sVygsFG086BsnN53ADbeqz745FU"/>
+          <div class="overlay absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent p-8"><h3 class="font-serif text-3xl italic text-white">Midnight Sun</h3></div>
+        </a>
+        <div class="group cinematic-card relative col-span-1 aspect-[3/4] cursor-pointer overflow-hidden bg-paper-dim"><img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjy_QI9YwSoLANj58wfvH67W94ulwNkXIXWILRojxRT07ym3fSJmFwG7YKt39p7SJwqYKDM0Qa_W8VSF2A4mhYEovf8tUWsru_JrIxdHlhieOMkUCBjF1vBZBO3JOIONfy0yIBKYPcX7abkcsSpZnDpzQeW2Q7st5vCyEYfLMX8gDs6-9YsB1sZ4Hrx7f87sZMKHj-sw1-sX1X3Qp_sMREI0YGnrNlLf7Eu3Oy1Ja1o9nSr7JOsP0hfQDpKduBGq7BoJLpfMQePnw" alt="Air Max Theory"/></div>
+        <div class="group cinematic-card relative col-span-1 aspect-[3/4] cursor-pointer overflow-hidden bg-paper-dim"><img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnDRJpsT15tOtVMLklFq8HmBPkt8BBDUAReEzK2oEFJhzLuNZZUL6Ag1zh1gkl0JP_kx56PDxlsgxF6RxyQilbp-UQND6hyPOQfRzZmB1y027bOZ-qJFiTXrZY5UGZAiXWZ3nCJ71ZtkdPbrHRDAp37jejze_VvdOYuDTu4QWHyFifvVWop0ZeyBNW9wmEvNNXlYGSKNTBWXacESGrUsdG7puFFudDLZWpUtM4CjtHg8S-eYtTCx8vSxA6S8jqBQNLAuLFiJouGbQ" alt="Wall of Eyes"/></div>
+        <div class="group cinematic-card relative col-span-1 lg:col-span-2 aspect-[16/9] cursor-pointer overflow-hidden bg-paper-dim"><img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeUtN0aJ7z37fCWB9nvto8GLdWRGrGXQIRYshN7wby6nVazPVHPBgBPywv3bquftkVrc37vRZe2t8CuOqGvPnGAWHDkAXvXUiejvpIP0tEfWTlaXmMbrwUSYCLxoM2nfTOVpG2iDYf-Z00lKSR3m1BTB2X4_sZrAKPEu0IigqqYk2EA_KeoNHMui-qovaoc-dnGIHafT-V4BX50R-nm0rKUHp9WcuNYGTJTtiOn94eqDW9E3YtCVdTlam2Cv5ESSZM6hqDuFIpp3M" alt="Promo Reel"/></div>
+      </div>
+    </section>
+
+    <footer class="mt-20 border-t border-ink/10 bg-paper py-20">
+      <div class="mx-auto w-full max-w-[1440px] px-6 lg:px-12 text-center">
+        <p class="font-mono text-xs uppercase tracking-widest text-ink/50">Next Chapter</p>
+        <a href="./process.html" class="font-serif text-5xl italic hover:text-cinema-red">The Process</a>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

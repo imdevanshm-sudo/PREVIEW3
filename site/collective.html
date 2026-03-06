@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumen Studios - The Collective</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { primary: "#cd3b1d", "background-light": "#f4f1ea", ink: "#1a1a1a", muted: "#8c8c8c" }, fontFamily: { serif: ["Playfair Display", "serif"], sans: ["Space Grotesk", "sans-serif"], mono: ["JetBrains Mono", "monospace"], display: ["Newsreader", "serif"] } } } }
+  </script>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./main.js" defer></script>
+</head>
+<body class="bg-background-light text-ink font-display antialiased">
+  <header class="sticky top-0 z-40 flex items-center justify-between border-b border-ink/10 bg-background-light/90 backdrop-blur-sm px-6 py-4 md:px-10">
+    <div class="flex items-center gap-4 text-ink"><span class="material-symbols-outlined text-2xl text-primary">videocam</span><h2 class="text-xl font-bold font-serif uppercase">Lumen Studios</h2></div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="text-xs font-mono tracking-wider uppercase hover:text-primary" href="./index.html">The Manifesto</a>
+      <a class="text-xs font-mono tracking-wider uppercase hover:text-primary" href="./archive.html">The Archive</a>
+      <a class="text-xs font-mono tracking-wider uppercase hover:text-primary" href="./process.html">The Process</a>
+      <a class="text-xs font-mono tracking-wider uppercase text-primary border-b border-primary" href="./collective.html">The Collective</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative w-full border-b border-ink/10">
+      <div class="relative w-full h-[70vh] overflow-hidden group">
+        <div class="absolute inset-0 bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCET4LNObI99FWPysiWvEZCvrsr2bdEmhLwDZAb-9dRFqhAI7ffvsffe6eOrm_MPdmmRLmphdWBXxU6hG0_-HUffAQAtH--mqcOUgZkLxSZWZJVRL4S0LrQBrGekMGpkUnH5U6zMwHm2qLjmXDguA3fTAk_lugstBxxhwa3zRYiH1Gjvfe4IW8eqDIS8iYCeImy-FybRqapMiuEe8b-8OK5kkc2S_gJqmBdMRaWbZiD_J54l2AfkoLkiIjD8BiwuRDqQPBI8cYB_I4');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        <div class="absolute inset-0 flex items-end p-8 md:p-12"><h1 class="font-serif text-6xl md:text-8xl italic text-white">The Floor</h1></div>
+      </div>
+    </section>
+
+    <section class="px-6 py-12 md:px-10 md:py-20 max-w-[1600px] mx-auto w-full">
+      <div class="flex justify-between items-baseline mb-12 border-b border-ink w-full pb-4"><h2 class="font-serif text-4xl md:text-5xl italic">Cast &amp; Crew</h2></div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-16">
+        <div class="group"><div class="aspect-[3/4] overflow-hidden mb-4"><img class="w-full h-full object-cover grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIz47SThK7TLqCI_OwHNGFgv5hBGOA2PMV2zISQX0MBhU1pyuH3SX-PDwphjHD8Fv-t46qCoIKAgF86B7rrhBZ686CRoYfGn71c7TcKZ9_HL50K_ho3_kTaD8u933Fsx-SKjCUxiBFzcbu9Lv8WQOx37In-sxR7nbQjj6wFm8EnnivcE-UI2D1BHtcP1dXDNcu9yIXDzH9QsakSu64BaU9EzPlLHTgJMMLmVCZQmBSwJJTTwdpbYD5Nq68HxBkGW3893vmuCNcG0g" alt="Elena"/></div><h3 class="font-sans text-xl font-bold">Elena Vance</h3><p class="font-mono text-xs text-muted uppercase">Executive Producer</p></div>
+        <div class="group"><div class="aspect-[3/4] overflow-hidden mb-4"><img class="w-full h-full object-cover grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCEF1LfWBQ8Wf99S1gl4hZLCsa9GbNz0wQqXCBazzLX7VBZWDW1ElFVWT_1DOPAPAIjzB9Aaa2OvO419LDadl9jkde2i7sVSm1wIan_8ozI8OC4pKxcGrj_hcn_aAAirXUvwiuz22n4_qOLTbIpWor7HbRXjz0zwhuyO8RGiV1u_SEuTRHiyoq4je5mZ4pWBYkFgqNdvUCRLdmHUhp7ZY1VHk0xdo6VhKOl44MJy9a4W7N_E6J5MJhYiki3Ek6ie8ui3jYsgf86Vw" alt="Marcus"/></div><h3 class="font-sans text-xl font-bold">Marcus Thorne</h3><p class="font-mono text-xs text-muted uppercase">Creative Director</p></div>
+        <div class="group"><div class="aspect-[3/4] overflow-hidden mb-4"><img class="w-full h-full object-cover grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4YZrPAipb4tDaKQZDN_CBM--AG1S-57Ti8IpUS5nKHkOCSBKYEyRwGBpJxlrGLMwbSo8lOauXx8RR9H5gN1dzf5ZhqBsg8Q1fU2lds7w_VbmDwKhNB3AaFPK6JRr1Cc7FhrxNIvim5xSr0bOWLQC_KFz6x25ToEDcS_NKtH8Sbp2PF4HdaCrm8Nu_wSwoFNult34-yepVi1Y19xo5WYQevTiVd1pVCYwpp8XcauzRBr9JtSzJziStuSzA4ydUiQ2hlkGsNqtKtuM" alt="Sarah"/></div><h3 class="font-sans text-xl font-bold">Sarah Jenkins</h3><p class="font-mono text-xs text-muted uppercase">Head of Production</p></div>
+        <div class="flex flex-col justify-between border border-ink/10 bg-white p-6 md:p-8"><span class="material-symbols-outlined text-4xl">diversity_3</span><div><h3 class="font-serif text-3xl italic leading-tight mb-4">The Missing Piece?</h3><a href="./project-detail.html" class="font-mono text-xs font-bold uppercase tracking-widest border-b border-ink">View Open Roles</a></div></div>
+      </div>
+    </section>
+
+    <footer class="bg-ink text-background-light pt-20 pb-10 px-6 md:px-10"><div class="max-w-[1600px] mx-auto"><h2 class="font-serif text-5xl md:text-7xl italic mb-6">Let's build truth.</h2></div></footer>
+  </main>
+</body>
+</html>
