@@ -1,10 +1,16 @@
 :root {
   --focus-ring: #cd3b1d;
   --mobile-fab-bottom: calc(1rem + env(safe-area-inset-bottom));
+  --app-vh: 1vh;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -14,6 +20,16 @@ body {
 a,
 button {
   min-height: 44px;
+  touch-action: manipulation;
+}
+
+img {
+  display: block;
+}
+
+.app-h-screen {
+  height: 100vh;
+  height: calc(var(--app-vh, 1vh) * 100);
 }
 
 a:focus-visible,
@@ -46,6 +62,7 @@ button:focus-visible,
     letter-spacing: 0.08em;
     text-transform: uppercase;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
   }
 
@@ -149,6 +166,19 @@ button:focus-visible,
   .bg-grain::before {
     opacity: 0.025;
   }
+}
+
+.low-end-device .film-grain {
+  animation: none !important;
+  opacity: 0.02 !important;
+}
+
+.low-end-device .bg-grain::before {
+  opacity: 0.02 !important;
+}
+
+.low-end-device .animate-marquee {
+  animation-duration: 40s !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
